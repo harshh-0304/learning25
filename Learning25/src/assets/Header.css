@@ -1,0 +1,9 @@
+.header{
+    background-color: bisque;
+    position: fixed;
+    top: 0%;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    color: black;
+}
