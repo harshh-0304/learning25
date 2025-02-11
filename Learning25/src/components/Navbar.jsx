@@ -1,17 +1,33 @@
 import React from 'react'
-import "../assets/navbar.css"
+import { Link } from 'react-router-dom'
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <div className='navbar'>
-        <div className='pages'>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Products</a>    
-    <a href="#">Contact</a>
-</div>
+    <div style={{textAlign:"center" ,  }}>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <Link class="nav-link" to="/home">Home <span class="sr-only">(current)</span></Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/movies">movies</Link>
+      </li>
+      
+      
      
-     
+    </ul>
+    
+  </div>
+</nav>
+      
     </div>
   )
 }
+
+export default Navbar
