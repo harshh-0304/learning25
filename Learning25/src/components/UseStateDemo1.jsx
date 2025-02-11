@@ -14,6 +14,7 @@ export const UseStateDemo1 = () => {
     setCount(count + 1);
     //  count++
     //console.log("count",count)
+    
   };
 
   return (
