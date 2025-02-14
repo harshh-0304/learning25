@@ -18,8 +18,36 @@ const Navbar = () => {
       <li class="nav-item">
         <Link class="nav-link" to="/movies">movies</Link>
       </li>
-      
-      
+      <li class="nav-item">
+        <Link class="nav-link" to="/formdemo1">formdemo1</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/formdemo2">FormDemo2</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/formdemo3">FormDemo3</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/formdemo4">FormDemo4</Link>
+      </li>
+     
+      <li class="nav-item">
+        <Link class="nav-link" to="/formdemo5">FormDemo5</Link>
+      </li>
+     
+      <li class="nav-item">
+        <Link class="nav-link" to="/formdemo6">FormDemo6</Link>
+      </li>
+     
+     
+      <li class="nav-item">
+        <Link class="nav-link" to="/formdemo7">FormDemo7</Link>
+      </li>
+     
+     
+      <li class="nav-item">
+        <Link class="nav-link" to="/formdemo8">FormDemo8</Link>
+      </li>
      
     </ul>
     
