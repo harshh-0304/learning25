@@ -109,6 +109,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/apidemo1">ApiDemo1</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/searchmovie">moviesearch</Link>
+            </li>
           </ul>
         </div>
       </nav>
