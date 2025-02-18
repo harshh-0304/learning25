@@ -1,10 +1,9 @@
-// 
-// 
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../../../assets/Moviedetail.css"; // Ensure this path is correct
 
-const MovieDetail = () => {
+const MovieDetails = () => {
   const { id } = useParams();
   const [detail, setDetail] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -24,85 +23,66 @@ const MovieDetail = () => {
     getMovieDetail();
   }, [id]);
 
-  if (loading) return <h2 style={{ textAlign: "center", color: "white" }}>Loading...</h2>;
+  if (loading) return <h2 className="loading-text">Loading...</h2>;
 
   return (
-    <div style={{ ...styles.background, backgroundImage: `url(${detail?.Poster})` }}>
-      <div style={styles.overlay}>
-        {/* Left: Movie Poster */}
-        <div style={styles.posterContainer}>
-          <img src={detail?.Poster} alt={detail?.Title} style={styles.poster} />
+    <div className="movie-detail-container">
+      <div className="movie-header">
+        <div className="movie-poster">
+          <img src={detail?.Poster} alt={detail?.Title} />
         </div>
-
-        {/* Right: Movie Details */}
-        <div style={styles.detailsContainer}>
-          <h1 style={styles.title}>{detail?.Title} ({detail?.Year})</h1>
-          <p style={styles.text}><strong>⭐ IMDb Rating:</strong> {detail?.imdbRating}/10</p>
-          <p style={styles.text}><strong>🎬 Director:</strong> {detail?.Director}</p>
-          <p style={styles.text}><strong>✍️ Writer:</strong> {detail?.Writer}</p>
-          <p style={styles.text}><strong>🎭 Cast:</strong> {detail?.Actors}</p>
-          <p style={styles.text}><strong>⏳ Runtime:</strong> {detail?.Runtime}</p>
-          <p style={styles.text}><strong>📅 Released:</strong> {detail?.Released}</p>
-          <p style={styles.text}><strong>🌍 Country:</strong> {detail?.Country}</p>
-          <p style={styles.text}><strong>🗣 Language:</strong> {detail?.Language}</p>
-          <p style={styles.plot}><strong>📖 Plot:</strong> {detail?.Plot}</p>
+        <div className="movie-info">
+          <h1>{detail?.Title} ({detail?.Year})</h1>
+          <p><strong>IMDb Rating:</strong> {detail?.imdbRating}/10</p>
+          <p><strong>Director:</strong> {detail?.Director}</p>
+          <p><strong>Writer:</strong> {detail?.Writer}</p>
+          <p><strong>Stars:</strong> {detail?.Actors}</p>
+          <p><strong>Runtime:</strong> {detail?.Runtime}</p>
+          <p><strong>Released:</strong> {detail?.Released}</p>
+          <p><strong>Country:</strong> {detail?.Country}</p>
+          <p><strong>Language:</strong> {detail?.Language}</p>
         </div>
+      </div>
+      <div className="movie-plot">
+        <h2>Plot</h2>
+        <p>{detail?.Plot}</p>
+      </div>
+      <div className="movie-additional-info">
+        <div className="rent-buy">
+          <p>RENT/BUY</p>
+          <div className="rent-buy-option">
+            <img src="https://images.indianexpress.com/2022/11/prime-video-disable-ads.jpg?w=414" alt="Rent or Buy" />
+            <p>from Rs.199</p>
+          </div>
+        </div>
+        <button className="watchlist-button">
+          <h2 className="bi bi-plus"></h2>
+          <div>
+            <strong>Add to watchlist</strong>
+            <br />
+            <i>added by 612k users</i>
+          </div>
+        </button>
+        <div className="reviews">
+          <p><strong>3.8K</strong> User reviews</p>
+          <p><strong>386</strong> Critic reviews</p>
+        </div>
+      </div>
+      <div className="movie-awards">
+        <p>Awards: {detail?.Awards}</p>
+        <h5 className="bi bi-chevron-right"></h5>
+      </div>
+      <div className="movie-details">
+        <h2>Details</h2>
+        <p>Release Date: <span>{detail?.Released}</span></p>
+        <p>Country of Origin: <span>{detail?.Country}</span></p>
+        <p>Languages: <span>{detail?.Language}</span></p>
+        <p>Genre: <span>{detail?.Genre}</span></p>
+        <p>Box Office Collection: <span>{detail?.BoxOffice}</span></p>
+        <p>Official Website: <span>{detail?.Website}</span></p>
       </div>
     </div>
   );
 };
 
-// 🎨 CSS-in-JS Styling
-const styles = {
-  background: {
-    width: "100vw",
-    height: "100vh",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-  },
-  overlay: {
-    width: "90%",
-    maxWidth: "1000px",
-    backgroundColor: "rgba(0, 0, 0, 0.85)", // Dark overlay for readability
-    color: "white",
-    display: "flex",
-    padding: "20px",
-    borderRadius: "10px",
-    boxShadow: "0px 4px 10px rgba(255, 255, 255, 0.1)",
-    flexWrap: "wrap",
-  },
-  posterContainer: {
-    flex: "1",
-    textAlign: "center",
-  },
-  poster: {
-    width: "100%",
-    maxWidth: "300px",
-    borderRadius: "10px",
-  },
-  detailsContainer: {
-    flex: "2",
-    padding: "20px",
-  },
-  title: {
-    fontSize: "28px",
-    fontWeight: "bold",
-    marginBottom: "10px",
-  },
-  text: {
-    fontSize: "16px",
-    marginBottom: "5px",
-  },
-  plot: {
-    fontSize: "14px",
-    marginTop: "10px",
-    lineHeight: "1.5",
-    color: "#bbb",
-  },
-};
-
-export default MovieDetail;
+export default MovieDetails;

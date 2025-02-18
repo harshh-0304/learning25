@@ -1,0 +1,117 @@
+.movie-detail-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    color: #fff;
+    background-color: #1c1c1c;
+  }
+  
+  .movie-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .movie-poster img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .movie-info {
+    flex: 1;
+  }
+  
+  .movie-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-info p {
+    margin: 19px 0;
+  }
+  
+  .movie-plot {
+    margin-top: 20px;
+  }
+  
+  .movie-plot h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-additional-info {
+    margin-top: 20px;
+  }
+  
+  .rent-buy {
+    margin-bottom: 20px;
+  }
+  
+  .rent-buy p {
+    font-weight: bold;
+    color: #c9a741;
+    
+  }
+  
+  .rent-buy-option {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .rent-buy-option img {
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+  .watchlist-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffc107;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .watchlist-button h2 {
+    margin: 0;
+  }
+  
+  .reviews {
+    margin-top: 20px;
+  }
+  
+  .reviews p {
+    margin: 5px 0;
+  }
+  
+  .movie-awards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ffc107;
+    margin-top: 20px;
+  }
+  
+  .movie-details {
+    margin-top: 20px;
+  }
+  
+  .movie-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details p {
+    margin: 5px 0;
+  }
+  
+  .movie-details span {
+    color: #ffc107;
+  }
+  

@@ -24,7 +24,7 @@
   }
   
   /* Custom card styling for shadow & hover effect */
-  .custom-card {
+  .custom-card {color: #ffffff;
     background-color: #373636; /* Dark card background */
     border: none;              /* Remove default card border */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
