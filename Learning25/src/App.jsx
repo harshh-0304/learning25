@@ -28,6 +28,7 @@ import SearchMovie from "./components/apis/omdb/SearchMovie";
 import MovieDetail from "./components/apis/omdb/MovieDetail";
 import ApiPostDemo1 from "./components/apis/ApiPostDemo1";
 import {PostApiDemo2} from "./components/apis/PostApiDemo2";
+import {UserList} from "./components/apis/UserList";
 
 
 
@@ -62,6 +63,7 @@ function App() {
         <Route path="/moviedetail/:id" element={<MovieDetail />} /> 
         <Route path="/apipostdemo1" element={<ApiPostDemo1 />} /> 
         <Route path="/postapidemo2" element={<PostApiDemo2 />} /> 
+        <Route path="/userlist" element={<UserList />} /> 
 
          </Routes>
     </div>

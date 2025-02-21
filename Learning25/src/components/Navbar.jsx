@@ -94,7 +94,7 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/formdemo4">FormDemo4</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/formdemo5">FormDemo5</Link>
             </li>
             <li className="nav-item">
@@ -108,7 +108,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/apidemo1">ApiDemo1</Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link className="nav-link" to="/searchmovie">moviesearch</Link>
             </li>
@@ -117,6 +117,9 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="postapidemo2">PostAPi demo 2</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="userlist">USerlist</Link>
             </li>
           </ul>
         </div>

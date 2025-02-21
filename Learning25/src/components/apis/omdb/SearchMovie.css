@@ -32,7 +32,7 @@
   
   .custom-card:hover {
     transform: scale(1.02);    
-    box-shadow: 0 4px 15px rgba(255, 8, 8, 0.5);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
   }
   
   /* Image hover effect */

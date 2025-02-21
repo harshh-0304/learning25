@@ -26,7 +26,7 @@ const MovieDetails = () => {
   if (loading) return <h2 className="loading-text">Loading...</h2>;
 
   return (
-    <div className="movie-detail-container">
+    <div  className="movie-detail-container">
       <div className="movie-header">
         <div className="movie-poster">
           <img src={detail?.Poster} alt={detail?.Title} />
