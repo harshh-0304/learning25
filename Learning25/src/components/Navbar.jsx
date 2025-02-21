@@ -112,6 +112,12 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/searchmovie">moviesearch</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="apipostdemo1">PostAPi demo 1</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="postapidemo2">PostAPi demo 2</Link>
+            </li>
           </ul>
         </div>
       </nav>

@@ -26,6 +26,8 @@ import { FormDemo8 } from "./components/forms/FormDemo8";
 import {ApiDemo1} from "./components/apis/ApiDemo1"; // Adjust the path as needed
 import SearchMovie from "./components/apis/omdb/SearchMovie";
 import MovieDetail from "./components/apis/omdb/MovieDetail";
+import ApiPostDemo1 from "./components/apis/ApiPostDemo1";
+import {PostApiDemo2} from "./components/apis/PostApiDemo2";
 
 
 
@@ -58,6 +60,9 @@ function App() {
         <Route path="/apidemo1" element={<ApiDemo1></ApiDemo1>}></Route>
         <Route path="/searchmovie" element={<SearchMovie></SearchMovie>}></Route>
         <Route path="/moviedetail/:id" element={<MovieDetail />} /> 
+        <Route path="/apipostdemo1" element={<ApiPostDemo1 />} /> 
+        <Route path="/postapidemo2" element={<PostApiDemo2 />} /> 
+
          </Routes>
     </div>
   );
